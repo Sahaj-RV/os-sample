@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Page Replacement Simulator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="container">
-    <h1>Page Replacement Simulator</h1>
+# Page Replacement Simulator
 
-    <label>Algorithm:</label>
-    <select id="algorithm">
-        <option>FIFO</option>
-        <option>LRU</option>
-        <option>Clock</option>
-        <option>Optimal</option>
-    </select>
+## Overview
+Simulates FIFO, LRU, Clock, and Optimal page replacement algorithms with a GUI frontend and Node backend. Core simulation is implemented in C.
 
-    <label>Frames:</label>
-    <input type="number" id="frames" min="1" max="64" value="4">
+## Folder Structure
+- `frontend/` → GUI HTML/CSS/JS
+- `backend/` → Node.js server for API
+- `src/` → C code for algorithms
+- `traces/` → Input traces
+- `results/` → Simulation output
+- `README.md` → Project info
 
-    <label>Trace File:</label>
-    <input type="file" id="tracefile">
+## Usage
 
-    <button id="runBtn">Run Simulation</button>
-
-    <h2>Metrics</h2>
-    <div id="metrics">
-        <p>Page Faults: <span id="faults">0</span></p>
-        <p>Hits: <span id="hits">0</span></p>
-        <p>Replacements: <span id="replacements">0</span></p>
-    </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+### Compile C code
+```bash
+gcc src/*.c -o bin/simulator
