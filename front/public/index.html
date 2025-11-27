@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Replacement Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Page Replacement Simulator</h1>
+    <div>
+        <label>Trace File: </label>
+        <input type="file" id="traceFile" />
+        <br>
+        <label>Algorithm: </label>
+        <select id="algorithm">
+            <option value="fifo">FIFO</option>
+            <option value="lru">LRU</option>
+            <option value="clock">Clock</option>
+            <option value="optimal">Optimal</option>
+        </select>
+        <br>
+        <button onclick="runSimulation()">Run Simulation</button>
+    </div>
+    <pre id="output"></pre>
+    <script src="script.js"></script>
+</body>
+</html>
